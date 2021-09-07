@@ -2,10 +2,10 @@ version: "3.7"
 services:
   transform:
     build: ./rpc/transform
-    image: go-zero/transform:latest
+    image: registry.cn-shanghai.aliyuncs.com/ltinyho-web/transform:latest
 
   shorturl:
     build: ./
-    image: go-zero/shorturl:latest
+    image: registry.cn-shanghai.aliyuncs.com/ltinyho-web/shorturl:latest
     ports:
       - "8080:8080"

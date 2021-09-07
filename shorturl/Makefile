@@ -10,6 +10,13 @@ transform:
 	GOOS=linux go build -o ./rpc/transform ./rpc/transform
 	docker-compose build transform
 
+.PHONY: build
+build: shorturl transform
+
+.PHONY: push
+push: build
+	docker-compose push
+
 .PHONY: dev
 dev:
 	docker-compose up

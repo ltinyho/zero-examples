@@ -3,4 +3,4 @@ Host: 0.0.0.0
 Port: 8080
 Transform:
   Endpoints:
-    - transform:8080
+    - transform-svc:8080

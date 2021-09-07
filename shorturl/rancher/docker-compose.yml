@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  rancher:
+    image: rancher/rancher:v2.5.7
+    restart: always
+    privileged: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./rancher:/var/lib/rancher
+      - ./log/auditlog:/var/log/auditlog
