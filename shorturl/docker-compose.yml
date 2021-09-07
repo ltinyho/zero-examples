@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  transform:
+    build: ./rpc/transform
+    image: go-zero/transform:latest
+
+  shorturl:
+    build: ./
+    image: go-zero/shorturl:latest
+    ports:
+      - "8080:8080"
