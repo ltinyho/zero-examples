@@ -8,6 +8,10 @@ require (
 	github.com/golang/protobuf v1.4.2
 	github.com/google/gops v0.3.14
 	github.com/gorilla/websocket v1.4.2
+	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
+	github.com/lestrrat-go/strftime v1.0.5 // indirect
+	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5
+	github.com/sirupsen/logrus v1.4.2
 	github.com/stretchr/testify v1.7.0
 	github.com/tal-tech/go-zero v1.1.6
 	golang.org/x/net v0.0.0-20210119194325-5f4716e94777

@@ -1,14 +1,12 @@
 package main
 
 import (
-	"time"
-
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/core/logx"
 )
 
 type TimeHolder struct {
-	Date time.Time `json:"date"`
+	Date string `json:"date"`
 }
 
 func main() {
