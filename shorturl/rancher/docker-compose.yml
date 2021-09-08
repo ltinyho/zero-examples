@@ -5,8 +5,8 @@ services:
     restart: always
     privileged: true
     ports:
-      - 80:80
-      - 443:443
+      - 7080:80
+      - 7443:443
     volumes:
-      - ./rancher:/var/lib/rancher
-      - ./log/auditlog:/var/log/auditlog
+      - ~/work/services/rancher/rancher:/var/lib/rancher
+      - ~/work/services/rancher/log/auditlog:/var/log/auditlog

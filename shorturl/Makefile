@@ -11,6 +11,14 @@ transform:
 	docker-compose build transform
 
 .PHONY: build
+push-shorturl: shorturl
+	docker-compose push shorturl
+
+.PHONY: build
+push-transform: transform
+	docker-compose push transform
+
+.PHONY: build
 build: shorturl transform
 
 .PHONY: push

@@ -2,6 +2,8 @@ package logic
 
 import (
 	"context"
+	"errors"
+	"os"
 
 	"shorturl/rpc/transform/internal/svc"
 	transform "shorturl/rpc/transform/pb"
@@ -28,7 +30,11 @@ func (l *ExpandLogic) Expand(in *transform.ExpandReq) (*transform.ExpandResp, er
 	if err != nil {
 		return nil, err
 	}
-
+	hostname, err := os.Hostname()
+	if err != nil {
+		return nil, errors.New("Could not determine hostname")
+	}
+	res.Url += " node:" + hostname
 	return &transform.ExpandResp{
 		Url: res.Url,
 	}, nil

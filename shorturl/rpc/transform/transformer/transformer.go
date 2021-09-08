@@ -59,7 +59,6 @@ func (m *defaultTransformer) Expand(ctx context.Context, in *ExpandReq) (*Expand
 	if err != nil {
 		return nil, errJsonConvert
 	}
-
 	return &ret, nil
 }
 
